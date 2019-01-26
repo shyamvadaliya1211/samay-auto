@@ -1,0 +1,29 @@
+<form class="form-inline" ng-controller="register" ng-submit="changePassword()" ng-init="loadProfile()">
+
+	<div class="container">
+
+		<div class="row">
+    		<label for="passWord">Old Password</label><br>
+    		<input type="Password" name="passWord" id="passWord" class="form-control" ng-model="profilePage.editObj.passWord" required>
+    		
+    	</div>
+
+    	<div class="row">
+    		<label for="newpassWord">New Password</label><br>
+    		<input type="Password" name="newpassWord" id="newpassWord" class="form-control" ng-model="newpassWord" required>
+    		
+    	</div>
+
+    	<div class="row">
+    		<label for="conpassWord">Confirm Password</label><br>
+    		<input type="Password" name="confirmpassWord" id="confirmpassWord" class="form-control" ng-model="confirmpassWord" required>
+    		
+    	</div><br>
+
+    	<div class="row">
+    		<button class="btn btn-success">Submit</button>
+    	</div>
+
+	</div>
+
+</form>

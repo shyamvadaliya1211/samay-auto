@@ -1,0 +1,45 @@
+<div ng-controller="register">
+
+	<form class="form-inline" ng-submit="register()">
+
+		<div class="container" >
+
+			<div class="row">
+	    		<label for="firstName">FirstName</label><br>
+	    		<input type="text" name="firstName" id="firstName" class="form-control" ng-model="firstName" required>
+	    		
+	    		
+	    	</div>
+
+	    	<div class="row">
+	    		<label for="lastName">LastName</label><br>
+	    		<input type="text" name="lastName" id="lastName" class="form-control" ng-model="lastName" required>
+	    		 
+	    	</div>
+
+	    	<div class="row">
+	    		<label for="email">Email</label><br>
+	    		<input type="email" name="email" id="email" class="form-control" ng-model="email" required>
+	    		
+
+	    	</div>
+
+	    	<div class="row">
+	    		<label for="passWord">Password</label><br>
+	    		<input type="Password" name="passWord" id="passWord" class="form-control" ng-model="passWord" required>
+	    		
+	    	</div><br>
+
+	    	<div class="row">
+	    		<button class="btn btn-success">Register</button>
+	    	</div>
+
+		</div>
+
+	</form>
+
+</div>
+
+
+
+

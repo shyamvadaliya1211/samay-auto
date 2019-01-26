@@ -1,0 +1,29 @@
+<form class="form-inline" ng-controller="register" ng-submit="changepro()" ng-init="loadProfile()">
+
+	<div class="container" >
+
+		<div class="row">
+    		<label for="firstName">FirstName</label><br>
+    		<input type="text" name="firstName" id="firstName" class="form-control" ng-model="profilePage.editObj.firstName" required>
+    		
+    	</div>
+
+    	<div class="row">
+    		<label for="lastName">LastName</label><br>
+    		<input type="text" name="lastName" id="lastName" class="form-control" ng-model="profilePage.editObj.lastName" required>
+    		 
+    	</div>
+
+    	<div class="row">
+    		<label for="email">Email</label><br>
+    		<input type="email" name="email" id="email" class="form-control" ng-model="profilePage.editObj.email" required>
+    		
+    	</div><br>
+
+    	<div class="row">
+    		<button class="btn btn-success">Submit</button>
+    	</div>
+
+	</div>
+
+</form>

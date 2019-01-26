@@ -1,0 +1,23 @@
+<div ng-controller="listController">
+	
+	<table class="table table-striped">
+		<tr>
+			<th class="text-center">Firstname</th>
+			<th class="text-center">Lastname</th>
+			<th class="text-center">Email</th>
+			<th class="text-center">Edit</th>
+			<th class="text-center">Delete</th>
+		</tr>
+  		<tr ng-repeat="x in userlimitData" class="text-center">
+    		<td>{{ x.firstName }}</td>
+    		<td>{{ x.lastName }}</td>
+    		<td>{{ x.email }}</td>
+    		<td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="userEdit(x)">Edit</button></td>
+    		<td><button type="button" class="btn btn-danger"  ng-click="remove(x._id)">Delete</button></td>
+  		</tr>
+
+	</table>
+
+	<button type="button" class="btn btn-primary loadbtn">Load</button>
+
+	</div>

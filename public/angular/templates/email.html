@@ -1,0 +1,72 @@
+<div ng-controller="register">
+<div id="wrapper">
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+        	<li>
+				<h1> {{g.loggedUser.firstName}}</h1>
+			</li>
+            <li>
+                <a href="#" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-plus-circle icon" aria-hidden="true"></i> Compose
+                </a>
+            </li>
+            <li>
+                <a ui-sref="inboxmail" ng-click="inboxMailUser()">Inbox</a>
+            </li>
+            <li>
+                <a ui-sref="sentemail" ng-click="sentMailUser()">Sent</a>
+            </li>
+        <ul>   
+    </div>
+    
+</div>
+
+
+    <div class="modal fade" id="myModal" tabindex="" ="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Email</h4>
+				</div>
+
+				<div class="modal-body">
+	      			<form data-toggle="validator" enctype="multipart/form-data" role="form" ng-submit="userEmail()" ng-init="loadProfile()">
+						<div class="form-group">
+						    <label for="to" class="control-label">To</label>
+						    <input type="email" class="form-control" id="to" ng-model="to" required>
+						</div>
+						<div class="form-group">
+						    <label for="subject" class="control-label">Subject</label>
+						    <input type="text" class="form-control" id="subject" ng-model="subject" required>
+						</div>
+						<div class="form-group">
+						    <label for="message" class="control-label">Message</label>
+						    <textarea summernote class="form-control" id="message" rows="3" ng-model="message" required></textarea>
+						</div>
+
+						<div class="form-group dropzone">
+						    <label for="fileUploaded" class="control-label" ng-model="file">File</label>
+						    <input type="file" name="file" />
+						    
+						</div>
+
+
+						   
+						<div class="form-group">
+						    <button type="submit" class="btn btn-primary" >Send</button>
+						</div>
+					</form>
+			    </div>
+
+			</div>
+		</div>
+	</div>
+
+</div>   
+
+
+
+   
+

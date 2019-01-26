@@ -1,0 +1,12 @@
+<form enctype="multipart/form-data" id="my-awesome-dropzone" action="/upload" method="post" class="dropzone">
+
+  <input type="file" name="photo" />
+  <input type="submit" value="Upload Image" name="submit" />
+</form>
+
+<div ng-app="app" ng-controller="someCtrl">
+  <button dropzone="dropzoneConfig">
+    Drag and drop files here or click to upload
+   </button>
+ </div>
+

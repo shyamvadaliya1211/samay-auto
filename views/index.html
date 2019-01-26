@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>app</title>
+
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="libs/font-awesome-4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="libs/summernote/dist/summernote.css">
+		<link rel="stylesheet" href="libs/angular/angular-toastr.css" />
+		<link rel="stylesheet" href="libs/dropzone/dist/dropzone.css">	
+
+		<script type="text/javascript" src="libs/jquery.min.js"></script>
+		<script type="text/javascript" src="libs/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="libs/summernote/dist/summernote.min.js"></script>
+		<script type="text/javascript" src="libs/angular.min.js"></script>
+	  	<script type="text/javascript" src="libs/angular-ui-router.js"></script>	  	
+	  	<script src="libs/angular/angular-animate.min.js"></script>
+		<script src="libs/angular/angular-toastr.tpls.js"></script>
+		<script type="text/javascript" src="libs/angular-summernote.min.js"></script>
+		<script type="text/javascript" src="libs/dropzone/dist/dropzone.js"></script>
+		<script type="text/javascript" src="libs/dropzone/dist/dropzone-amd-module.js"></script>
+
+		<script type="text/javascript" src="angular/app.js"></script>
+		<script type="text/javascript" src="angular/controllers/home.js"></script>
+
+
+
+
+
+	</head>
+
+	<body ng-app="myHeader">
+
+
+
+		<nav class="navbar-inverse">
+		  	<div class="container">
+
+		    	<div class="navbar-header">
+		      		<a class="navbar-brand sidename" href="#/home">WebSiteName</a>
+		    	</div>
+		    
+		    	<ul class="nav navbar-nav navbar-right" ng-controller="register"															>
+		      		<li><a ui-sref="Home"> Home </a></li>
+		      		<li><a ui-sref="About"> About as </a></li>
+		      		<li><a ui-sref="demo"> demo </a></li>		      		
+		      		<li ng-hide="g.loggedUser._id"><a ui-sref="registration"> Registration </a></li>
+		      		<li ng-hide="g.loggedUser._id"><a ui-sref="login"> Login </a></li>
+		      		<li class="dropdown" ng-show="g.loggedUser._id">
+          				<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bars"></i></a>
+          					<ul class="dropdown-menu">
+          						<li><a ui-sref="email">Email</a></li>
+            					<li><a ui-sref="changeprofile">Change Profile</a></li>
+            					<li><a ui-sref="changepassword">Change Password</a></li>
+            					<li><a ui-sref="logout" ng-click="logout()">Logout</a></li>
+          					</ul>
+        			</li>
+		    	</ul>
+
+			</div>
+
+		</nav>
+<ui-view></ui-view>
+	
+	</body>
+
+</html>
