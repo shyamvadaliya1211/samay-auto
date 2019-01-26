@@ -59,7 +59,7 @@ app.use('/', routes);
 
 
 //connection mongoose
-mongoose.connect('mongodb://localhost/register-app');
+mongoose.connect('mongodb://localhost/samay-auto');
 
 
 
