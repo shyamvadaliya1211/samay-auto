@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var multer = require('multer');
 var routes = require('./app/routers/routes');
-	
+var PORT = process.env.PORT || 5000;
 
 
 var upload = multer({dest: 'public/uploads'}).single('photo');
@@ -252,6 +252,6 @@ app.post('/upload', function(request, response) {
 
 
 // localhost:300
-app.listen(4748, function() {
-	console.log('Example app listening on port 4748!')
+app.listen(PORT, function() {
+	console.log('Example app listening on port 5000!')
 });
